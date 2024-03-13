@@ -35,7 +35,9 @@ public class NewsArticle {
     @NotEmpty(message = "Image url cannot be empty")
     private String imageUrl;
 
+    @AssertFalse(message = "Is published must be false because the news article is not published yet")
     private boolean isPublished = false;
 
+    @Null(message = "Publish date must be empty because the news article is not published yet")
     private LocalDate publishDate;
 }
