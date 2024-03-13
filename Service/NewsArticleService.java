@@ -41,6 +41,7 @@ public class NewsArticleService {
         for(NewsArticle n : newsArticles){
             if(n.getId().equals(id)){
                 n.setPublished(true);
+                n.setPublishDate(LocalDate.now());
                 return true;
             }
         }
